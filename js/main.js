@@ -15,7 +15,6 @@ $(document).ready(function () {
     dotChoosen
   )
 
-
   function nextPic() {
     //salvo selezione dell'immagine attiva attuale
     var currentPic = $('.images img.active');
@@ -69,6 +68,39 @@ $(document).ready(function () {
     //aggiungo classe active all'immagine corrispondente all'index del dot cliccato
     img.eq(clickedDot).addClass("active");
   }
+
+
+  /*   var key = e.which;
+   */
+  /*   if (key == 39) {
+      
+        nextPic
+      }
+  
+    } else if (key == 37) {
+      prevPic
+    }
+   */
+
+  //controllo pic attraverso left e right
+  $(document).keydown(function (event) {
+
+    var keycode = (event.keyCode);
+    console.log(keycode)
+    if (keycode == '39') {
+      nextPic()
+    } else if (keycode == '37') {
+      prevPic()
+    } else {
+
+    }
+
+  });
+
+
+
+
+
 
 });
 
